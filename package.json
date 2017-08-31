@@ -1,0 +1,11 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "starter for convert PSD to HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikita Laitinen",
+  "license": "ISC"
+}
