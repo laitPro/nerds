@@ -8,7 +8,8 @@ var $ = {
     templates: require('./gulp/paths/path.templates')
   },
   gulp: require('gulp'),
-  gp: require('gulp-load-plugins')({})
+  gp: require('gulp-load-plugins')(),
+  combine: require('stream-combiner2').obj
 };
 
 $.paths.tasks.forEach(function(taskPath) {

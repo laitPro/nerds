@@ -2,10 +2,10 @@
 
 module.exports = function($) {
   $.gulp.task('pug', function() {
-    return $.gulp.src($.paths.templates)
-      .pipe($.gp.pug({
-      	pretty: true
-      }))
-      .pipe($.gulp.dest($.config.root));
+  	return $.combine(
+  		$.gulp.src($.paths.templates),
+  		$.gp.pug({ pretty: true }),
+  		$.gulp.dest($.config.root)
+  	)   
   });
 };
