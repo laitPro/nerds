@@ -9,7 +9,8 @@ var $ = {
   },
   gulp: require('gulp'),
   gp: require('gulp-load-plugins')(),
-  combine: require('stream-combiner2').obj
+  combine: require('stream-combiner2').obj,
+  rimraf: require('rimraf')
 };
 
 $.paths.tasks.forEach(function(taskPath) {
@@ -20,5 +21,6 @@ $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(
     'pug'
-  )
+  ),
+  'watch'
 ));
