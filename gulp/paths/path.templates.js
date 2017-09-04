@@ -1,3 +1,3 @@
 module.exports = [
-	'./app/template/**/[^_]*.pug'
+	'./app/template/pages/[^_]*.pug'
 ]
