@@ -22,7 +22,8 @@ $.paths.tasks.forEach(function(taskPath) {
 $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(
-    'pug'
+    'pug',
+    'sass'
   ),
   $.gulp.parallel(
     'watch',
