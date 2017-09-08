@@ -11,7 +11,8 @@ var $ = {
   gp: require('gulp-load-plugins')(),
   combine: require('stream-combiner2').obj,
   rimraf: require('rimraf'),
-  browserSync: require('browser-sync').create()
+  browserSync: require('browser-sync').create(),
+  fs: require('fs')
 };
 
 $.paths.tasks.forEach(function(taskPath) {

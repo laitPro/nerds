@@ -2,10 +2,13 @@
 
 module.exports = function($) {
   $.gulp.task('pug', function() {
-  	return $.combine(
-  		$.gulp.src($.paths.templates),
-  		$.gp.pug({ pretty: true }),
-  		$.gulp.dest($.config.root)
-  	)   
+    return $.combine(
+      $.gulp.src($.paths.templates),
+      $.gp.pug({
+        locals : JSON.parse($.fs.readFileSync('./content.json', 'utf8')),
+        pretty: true
+      }),
+      $.gulp.dest($.config.root)
+    );   
   });
 };
