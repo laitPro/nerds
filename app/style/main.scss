@@ -1,2 +1,8 @@
-@import 'blocks/logo';
+//main settings
+@import 'layout/setups';
+
+//all blocks
+@import 'blocks/**/*';
+
+
 
