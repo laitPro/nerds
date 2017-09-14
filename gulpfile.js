@@ -26,13 +26,17 @@ $.paths.tasks.forEach(function(taskPath) {
   require(taskPath)($);
 });
 
+$.dev = true;
+
 $.gulp.task('default', $.gulp.series(
-  'clean',
   $.gulp.parallel(
-    'pug',
-    'sass',
+    'clean',
     'img.opt',
     'img.sprite'
+  ),
+  $.gulp.parallel(
+    'pug',
+    'sass'
   ),
   $.gulp.parallel(
     'watch',
