@@ -3,10 +3,10 @@
 var $ = {
   package: require('./package.json'),
   config: require('./gulp/config'),
-  paths: {
-    tasks: require('./gulp/paths/path.tasks'),
-    templates: require('./gulp/paths/path.templates'),
-    imgs: require('./gulp/paths/path.imgs.js')
+  path: {
+    task: require('./gulp/path/path.task'),
+    template: require('./gulp/path/path.template'),
+    img: require('./gulp/path/path.img.js')
   },
   gulp: require('gulp'),
   combine: require('stream-combiner2').obj,
@@ -23,7 +23,7 @@ var $ = {
   }),
 };
 
-$.paths.tasks.forEach(function(taskPath) {
+$.path.task.forEach(function(taskPath) {
   require(taskPath)($);
 });
 
