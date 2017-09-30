@@ -4,3 +4,98 @@ block title
     | The main title of index page
 
 block content
+        header.main-header
+            .container
+
+                a(href='#').logo
+                    h1.logo__title nerds
+                    img(src='#' alt='logo').logo__img
+
+                nav.main-nav
+                    ul.nav-list
+                        - var nav = ['студия', 'клиенты', 'магазин', 'контакты']
+                        each item in nav
+                            li.nav-list__item
+                                a(href="#").nav-list__link= item
+
+                .shop-cart
+                    a(href='#').shop-cart__text корзина
+
+                .slider
+                    .slider__info
+                        h2.slider__title Долго, дорого, скрупулезно.
+                        p.slider__desc
+                            | Математически выверенный дизайн для вашего сайта или мобильного приложения.
+                        a(href="#").btn.slider__btn Узнать больше
+                    ul.slider__pagination
+                        - for (var i=1; i<=3; i++)
+                            li.pagination__item
+                                a(href="#").pagination__link pagin
+                    .slider__wrap-img
+                        img(src='#' alt='slider-img').slider__img
+
+        main.main-content
+            .container
+
+                section.service
+                    ul.service__list
+                        - for (var i=0; i<3; i++)
+                            li.service__item
+                                .service__wrap-img
+                                    img(src='#' alt='service').service__img
+                                span.list__title веб-сайты
+                                p.list__desc Мир никогда не будет прежним после того как увидит ваш сайт
+
+                                a.btn Заказать
+
+                section.about
+                    .about__left
+                        h2.about__title Мы - маленькая, но гордая дизайн-студия из Краснодара.
+                        p.about__desc Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
+                        .about__works
+                            p.works__title Выполняем заказы на разработку:
+                            ul.works__list
+                                - for (var i = 0; i < 3; i++)
+                                    li.works__item
+                                        span.works__elem Веб-сайтов любой сложности
+                    .about__right
+                        .about__wrap-img
+                            img(src='#' alt='about-img').about__img
+                        .about__skills
+                            p.skills__title с 2004 года любим точность во всем:
+                            ul.skills__list
+                                - for (var i = 0; i < 3; i++)
+                                    li.skills__item
+                                        span.skills__number 146
+                                        span.skills__percent %
+                                        span.skills__desc Уровень самоотдачи
+
+                section.partners
+                    ul.partners-list
+                        - for (var i = 0; i < 3; i++)
+                            li.list-item
+                                a(href='#').partners__wrap-img
+                                    img(src='#' alt='partner').partners__img
+                section.map
+                    .map__wrap-flag
+                        img(src='#' alt='flag-img').flag-img
+                    .container
+                        .map__info
+                            span.map__info-title Nerds design studio
+                            p.map__info-text 191186, Санкт-Петербург, ул. Б.    Конюшенная, д. 19/8
+                            p.map__info-text тел. +7 (812) 275-75-75
+                            a(href='#').btn Напишите нам
+
+        footer.main-footer
+
+            .container
+                ul.socials
+                    - for (var i = 0; i < 3; i++)
+                         li.socials__item
+                             a(href='#').socials__link vk
+                .slogan
+                    span.slogan__title Давайте дружить, это выгодно!
+                    p.slogan__text Скидка 10% для друзей из социальных сетей.
+
+
+
