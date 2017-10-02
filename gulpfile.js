@@ -6,7 +6,8 @@ var $ = {
   path: {
     task: require('./gulp/path/path.task'),
     template: require('./gulp/path/path.template'),
-    img: require('./gulp/path/path.img.js')
+    img: require('./gulp/path/path.img.js'),
+    font: require('./gulp/path/path.fonts.js')
   },
   gulp: require('gulp'),
   combine: require('stream-combiner2').obj,
@@ -33,7 +34,8 @@ $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(
     'img.opt',
-    'img.sprite'
+    'img.sprite',
+    'copy.fonts'
   ),
   $.gulp.parallel(
     'pug',
