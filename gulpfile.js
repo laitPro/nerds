@@ -27,7 +27,7 @@ $.path.task.forEach(function(taskPath) {
   require(taskPath)($);
 });
 
-$.dev = false;
+$.dev = true;
 
 $.gulp.task('default', $.gulp.series(
   'clean',

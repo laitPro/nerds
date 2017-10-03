@@ -7,20 +7,21 @@ block content
         header.main-header
             .container
 
-                a(href='#').logo
+                a(href='#').logo.main-header__logo
                     h1.logo__title nerds
-                    img(src='#' alt='logo').logo__img
+                    img(src='imgs/content/nerds-logo.png' width='1000000px;' alt='logo').logo__img
 
-                nav.main-nav
+                nav.main-nav.main-header__main-nav
                     ul.nav-list
                         - var nav = ['студия', 'клиенты', 'магазин', 'контакты']
                         each item in nav
                             li.nav-list__item
                                 a(href="#").nav-list__link= item
 
-                .shop-cart
+                .shop-cart.main-header__shop-cart
                     a(href='#').shop-cart__text корзина
-
+                    
+            .container
                 .slider
                     .slider__info
                         h2.slider__title Долго, дорого, скрупулезно.

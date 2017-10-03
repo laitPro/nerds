@@ -1,4 +1,4 @@
-@mixin inlbl($pos: 'top') {
+@mixin veral($pos: 'top') {
 	display: inline-block;
 
 	@if $pos == 'top' {

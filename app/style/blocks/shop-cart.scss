@@ -1,0 +1,26 @@
+.shop-cart {
+	width: 140px;
+	text-align: right;
+}
+
+.shop-cart__text {
+	position: relative;
+	@include veral();
+	padding-left: 40px;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top:50%;
+		transform: translateY(-50%);
+		left:0;
+
+		@include sprite($cart-icon);
+	}
+}
+
