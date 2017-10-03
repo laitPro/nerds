@@ -1,0 +1,18 @@
+.btn {
+	@include veral();
+	width: 240px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	line-height: 16px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+
+	background-color: #fb565a;
+	color: #fff;
+
+	border-radius: 2px;
+
+	box-shadow: inset 0px 0px 7px 0px rgba(#fff,.35);
+}

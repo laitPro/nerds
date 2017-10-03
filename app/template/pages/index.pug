@@ -22,19 +22,25 @@ block content
                     a(href='#').shop-cart__text корзина
                     
             .container
-                .slider
-                    .slider__info
-                        h2.slider__title Долго, дорого, скрупулезно.
-                        p.slider__desc
-                            | Математически выверенный дизайн для вашего сайта или мобильного приложения.
-                        a(href="#").btn.slider__btn Узнать больше
+                .slider.main-header__slider
+                    .slider__slide
+
+                        .slider__info
+                            h2.slider__title Только ночь, <br> только хардкор
+                            p.slider__desc
+                                | Математически выверенный дизайн  для вашего сайта или мобильного приложения.
+                            a(href="#").btn.slider__btn Узнать больше
+
+                        .slider__wrap-img
+                            img(src='imgs/content/slide3.png' alt='slider-img').slider__img
+
                     ul.slider__pagination
                         - for (var i=1; i<=3; i++)
                             li.pagination__item
-                                a(href="#").pagination__link pagin
-                    .slider__wrap-img
-                        img(src='#' alt='slider-img').slider__img
-
+                                - if (i == 2)
+                                    a(href="#").pagination__link.pagination__link_active pagin
+                                - else
+                                    a(href="#").pagination__link.pagination__link pagin
         main.main-content
             .container
 
