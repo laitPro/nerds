@@ -56,24 +56,21 @@ block content
                 section.about
                     .about__left
                         h2.about__title Мы - маленькая, но гордая дизайн-студия из Краснодара.
-                        p.about__desc Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
-                        .about__works
-                            p.works__title Выполняем заказы на разработку:
-                            ul.works__list
-                                - for (var i = 0; i < 3; i++)
-                                    li.works__item
-                                        span.works__elem Веб-сайтов любой сложности
+                        p.about__desc Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы
+                        p.about__works-title Выполняем заказы на разработку:
+                        ul.about__works-list
+                            each item in works
+                                li.about__works-item
+                                    span.about__works-elem=item.works_elem
                     .about__right
                         .about__wrap-img
-                            img(src='#' alt='about-img').about__img
-                        .about__skills
-                            p.skills__title с 2004 года любим точность во всем:
-                            ul.skills__list
-                                - for (var i = 0; i < 3; i++)
-                                    li.skills__item
-                                        span.skills__number 146
-                                        span.skills__percent %
-                                        span.skills__desc Уровень самоотдачи
+                            img(src='../imgs/content/nerds-illustration.jpg' alt='about-img').about__img
+                            p.about__skills-title с 2004 года любим точность во всем:
+                            ul.about__skills-list
+                                each item in skills
+                                    li.about__skills-item
+                                        span.about__skills-number=item.skills_number
+                                        span.about__skills-desc=item.skills_text
 
                 section.partners
                     ul.partners-list
