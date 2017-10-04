@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-  font: $font-medium $font-size-base $font-family-1;
+  font: $font-regular $font-size-base $font-family-1;
   color: $color-text-base;
 }
 
@@ -20,8 +20,4 @@ h1, h2, h3, h4, h5 {
 	font-weight: normal;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-}
 

@@ -1,3 +1,41 @@
 {
-  "socials": ["vk", "fb", "tw"]
+    "socials": ["vk", "fb", "tw"],
+    "slides" : [
+        {
+            "title" : "Долго, дорого, <br> скрупулезно",
+            "desc" : "Математически выверенный дизайн  для вашего сайта или мобильного приложения.",
+            "src_img" : "imgs/content/slide1.png"
+        },
+        {
+            "title" : "Любим математику<br> как никто другой",
+            "desc" : "Никакого креатива, только математические формулы для рассчета идеальных пропорций",
+            "src_img" : "imgs/content/slide2.png",
+            "style" : "transform: none; left: auto; right: 0px"
+        },
+        {
+            "title" : "Только ночь, <br> только хардкор",
+            "desc" : "Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается",
+            "src_img" : "imgs/content/slide3.png"
+        }
+    ],
+    "service" : [
+        {
+            "wrap_img" : "imgs/content/illustration-1.jpg",
+            "list_title" : "веб-сайты",
+            "list_desc" : "Мир никогда не будет прежним после того как увидит ваш сайт",
+            "color" : "red"
+        },
+        {
+            "wrap_img" : "imgs/content/illustration-2.jpg",
+            "list_title" : "приложения",
+            "list_desc" : "Покорите топ-10 приложений в AppStore и Google Play",
+            "color" : "green"
+        },
+        {
+            "wrap_img" : "imgs/content/illustration-3.jpg",
+            "list_title" : "Презентации",
+            "list_desc" : "Вы даже не подозреваете, насколько вы изумительны!",
+            "color" : "yellow"
+        }
+    ]
 }

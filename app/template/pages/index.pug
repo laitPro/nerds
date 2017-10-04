@@ -9,7 +9,7 @@ block content
 
                 a(href='#').logo.main-header__logo
                     h1.logo__title nerds
-                    img(src='imgs/content/nerds-logo.png' width='1000000px;' alt='logo').logo__img
+                    img(src='imgs/content/nerds-logo.png'  alt='logo').logo__img
 
                 nav.main-nav.main-header__main-nav
                     ul.nav-list
@@ -23,21 +23,19 @@ block content
                     
             .container
                 .slider.main-header__slider
-                    .slider__slide
+                    - for (var i=1; i < slides.length - 1; i++)
+                        .slider__slide                       
+                            .slider__info
+                                h2.slider__title!=slides[i].title
+                                p.slider__desc=slides[i].desc
+                                a(href="#").btn.slider__btn Узнать больше
 
-                        .slider__info
-                            h2.slider__title Только ночь, <br> только хардкор
-                            p.slider__desc
-                                | Математически выверенный дизайн  для вашего сайта или мобильного приложения.
-                            a(href="#").btn.slider__btn Узнать больше
-
-                        .slider__wrap-img
-                            img(src='imgs/content/slide3.png' alt='slider-img').slider__img
-
+                            .slider__wrap-img
+                                img(src='' + slides[i].src_img alt='slider-img' style='' + slides[i].style).slider__img
                     ul.slider__pagination
                         - for (var i=1; i<=3; i++)
                             li.pagination__item
-                                - if (i == 2)
+                                - if (i == 1)
                                     a(href="#").pagination__link.pagination__link_active pagin
                                 - else
                                     a(href="#").pagination__link.pagination__link pagin
@@ -46,14 +44,14 @@ block content
 
                 section.service
                     ul.service__list
-                        - for (var i=0; i<3; i++)
+                        - for (var i = 0; i < service.length; i++)
                             li.service__item
                                 .service__wrap-img
-                                    img(src='#' alt='service').service__img
-                                span.list__title веб-сайты
-                                p.list__desc Мир никогда не будет прежним после того как увидит ваш сайт
+                                    img(src='' + service[i].wrap_img alt='service').service__img
+                                span.service__list-title=service[i].list_title
+                                p.service__list-desc=service[i].list_desc
 
-                                a.btn Заказать
+                                a.btn.service__btn(class="btn_" + service[i].color) Заказать
 
                 section.about
                     .about__left
