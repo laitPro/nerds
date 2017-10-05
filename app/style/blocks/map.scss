@@ -1,0 +1,44 @@
+.map {
+	height: 416px;
+	background: url('../imgs/content/map.jpg') center center no-repeat;
+	padding-top: 53px;
+}
+
+.map__wrap-flag {
+	position: absolute;
+	top: 15px;
+	left: 695px;
+	
+	max-width: 232px;
+}
+
+.flag-img {
+	max-width: 100%;
+	height: auto;
+}
+
+.map__info {
+	width: 320px;
+	padding: 40px;
+	background: #fff;
+}
+
+.map__info-title {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: $font-bold;
+	margin-bottom: 20px;
+}
+
+.map__info-text {
+	line-height: 18px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+.map__button {
+	display: block;
+	margin-top: 35px;
+
+	background: #fb565a;
+}

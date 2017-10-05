@@ -1,0 +1,18 @@
+.main-footer {
+	padding-top: 65px;
+	padding-bottom: 65px;
+}
+
+.main-footer__socials {
+	margin-right: 40px;
+}
+
+.main-footer__slogan {
+	@include veral(top);
+}
+
+.main-footer__slogan-title {
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: $font-bold;
+}

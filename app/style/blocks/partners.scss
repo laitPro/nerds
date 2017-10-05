@@ -1,0 +1,39 @@
+.partners {
+	padding-top: 45px;
+	padding-bottom: 40px;
+	border-bottom: 2px solid #eee;
+	margin-bottom: 80px;
+}
+
+.partners__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+
+.partners__list-item {
+	@include veral(middle);
+	width: 260px;
+	margin-right: 40px;
+	text-align: center;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.partners__wrap-img {
+	display: inline-block;
+	max-width: 260px;
+}
+
+.partners__img {
+	max-width: 100%;
+	height: auto;
+	opacity: .2;
+
+	&:hover {
+		opacity: 1;
+	}
+}

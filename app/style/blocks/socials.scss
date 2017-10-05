@@ -1,0 +1,40 @@
+.socials {
+	@include veral(top);
+	width: 360px;
+	font-size: 0;
+}
+
+.socials__item {
+	@include veral(top);
+	margin-right: 10px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.socials__link {
+	position: relative;
+	display: block;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: #e1e1e1;
+
+	&:before {
+		content: '';
+		@include centered();
+	};
+
+	$socials: (   
+  		vk: $vk-icon,
+  		fb: $fb-icon,
+  		inst: $insta-icon
+	);
+	
+	@each $name, $variable in $socials {
+		&_#{$name}:before {
+			@include sprite(map-get($socials, $name));
+		}
+	}
+}
