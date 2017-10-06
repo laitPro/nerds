@@ -98,3 +98,18 @@ block content
                 .main-footer__slogan
                     span.main-footer__slogan-title Давайте дружить, это выгодно!
                     p.main-footer__slogan-text Скидка 10% для друзей из социальных сетей.
+
+        .write-us
+            p.write-us__title Напишите нам
+            a(href="#").write-us__close
+            form(action="#").write-us__form
+                .write-us__wrap-input.write-us__wrap-input_name
+                    label.write-us__form-label Ваше имя:
+                    input.write-us__form-input(type='text' placeholder='Представьтесь,  пожалуйста')
+                .write-us__wrap-input
+                    label.write-us__form-label Ваш e-mail
+                    input.write-us__form-input(type='text' placeholder='Для отправки ответа')
+                .write-us__wrap-input.write-us__wrap-input_textarea
+                    label.write-us__form-label Текст письма
+                    textarea(placeholder='В свободной форме').write-us__form-textarea
+                button.btn.write-us__btn Отправить
