@@ -1,7 +1,7 @@
 .main-header {
 	padding-top: 49px;
 
-	background-color: #eee;
+	background-color: $background-color-grey;
 }
 
 .main-header__logo {
@@ -20,5 +20,5 @@
 }
 
 .main-header__slider {
-	margin-top: 18px;
+	padding-top: 18px;
 }

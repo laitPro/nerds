@@ -1,0 +1,9 @@
+section.service
+  ul.service__list
+    - for (var i = 0; i < service.length; i++)
+        li.service__item
+          .service__wrap-img
+            img(src='' + service[i].wrap_img alt='service').service__img
+          span.service__list-title=service[i].list_title
+          p.service__list-desc=service[i].list_desc
+          a.btn.service__btn(class="btn_" + service[i].color) Заказать

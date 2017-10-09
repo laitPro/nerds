@@ -4,112 +4,24 @@ block title
     | Nerds
 
 block content
-        header.main-header
-            .container
+  header.main-header
+    .container
+      include ../blocks/logo.pug
+      include ../blocks/main-nav.pug
+      include ../blocks/shop-cart.pug  
+    .container
+        include ../blocks/slider.pug
+  main.main-content
+    .container
+      include ../blocks/service.pug
+      include ../blocks/about.pug
+      include ../blocks/partners.pug
+    include ../blocks/map.pug
+  footer.main-footer
+    .container
+      include ../blocks/socials
+      .main-footer__slogan
+        span.main-footer__slogan-title Давайте дружить, это выгодно!
+        p.main-footer__slogan-text Скидка 10% для друзей из социальных сетей.
 
-                a(href='#').logo.main-header__logo
-                    h1.logo__title nerds
-                    img(src='imgs/content/nerds-logo.png'  alt='logo').logo__img
 
-                nav.main-nav.main-header__main-nav
-                    ul.nav-list
-                        - var nav = ['студия', 'клиенты', 'магазин', 'контакты']
-                        each item in nav
-                            li.nav-list__item
-                                a(href="#").nav-list__link= item
-
-                .shop-cart.main-header__shop-cart
-                    a(href='#').shop-cart__text корзина
-                    
-            .container
-                .slider.main-header__slider
-                    - for (var i=1; i < slides.length - 1; i++)
-                        .slider__slide                       
-                            .slider__info
-                                h2.slider__title!=slides[i].title
-                                p.slider__desc=slides[i].desc
-                                a(href="#").btn.slider__btn Узнать больше
-
-                            .slider__wrap-img
-                                img(src='' + slides[i].src_img alt='slider-img' style='' + slides[i].style).slider__img
-                    ul.slider__pagination
-                        - for (var i=1; i<=3; i++)
-                            li.pagination__item
-                                - if (i == 1)
-                                    a(href="#").pagination__link.pagination__link_active pagin
-                                - else
-                                    a(href="#").pagination__link.pagination__link pagin
-        main.main-content
-            .container
-
-                section.service
-                    ul.service__list
-                        - for (var i = 0; i < service.length; i++)
-                            li.service__item
-                                .service__wrap-img
-                                    img(src='' + service[i].wrap_img alt='service').service__img
-                                span.service__list-title=service[i].list_title
-                                p.service__list-desc=service[i].list_desc
-
-                                a.btn.service__btn(class="btn_" + service[i].color) Заказать
-
-                section.about
-                    .about__left
-                        h2.about__title Мы - маленькая, но гордая дизайн-студия из Краснодара.
-                        p.about__desc Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы
-                        p.about__works-title Выполняем заказы на разработку:
-                        ul.about__works-list
-                            each item in works
-                                li.about__works-item
-                                    span.about__works-elem=item.works_elem
-                    .about__right
-                        .about__wrap-img
-                            img(src='imgs/content/nerds-illustration.jpg' alt='about-img').about__img
-                            p.about__skills-title с 2004 года любим точность во всем:
-                            ul.about__skills-list
-                                each item in skills
-                                    li.about__skills-item
-                                        span.about__skills-number=item.skills_number
-                                        span.about__skills-desc=item.skills_text
-
-                section.partners
-                    ul.partners__list
-                        - for (var i = 1; i < 5; i++)
-                            li.partners__list-item
-                                a(href='#').partners__wrap-img
-                                    img(src='imgs/content/logo-' + i + '.pngcopy.png' alt='partner'  ).partners__img
-            section.map
-                .container
-                    .map__wrap-flag
-                        img(src='imgs/content/map-marker.png' alt='flag-img').flag-img
-                    .map__info
-                        span.map__info-title Nerds design studio
-                        p.map__info-text 191186, Санкт-Петербург, улКонюшенная, д.  19/8
-                        p.map__info-text тел. +7 (812) 275-75-75
-                        a(href='#').btn.map__button Напишите нам
-
-        footer.main-footer
-
-            .container
-                ul.socials.main-footer__socials
-                    each item in ['vk', 'fb', 'inst']
-                         li.socials__item
-                             a(href='#' class='socials__link_' + item).socials__link=item
-                .main-footer__slogan
-                    span.main-footer__slogan-title Давайте дружить, это выгодно!
-                    p.main-footer__slogan-text Скидка 10% для друзей из социальных сетей.
-
-        .write-us
-            p.write-us__title Напишите нам
-            a(href="#").write-us__close
-            form(action="#").write-us__form
-                .write-us__wrap-input.write-us__wrap-input_name
-                    label.write-us__form-label Ваше имя:
-                    input.write-us__form-input(type='text' placeholder='Представьтесь,  пожалуйста')
-                .write-us__wrap-input
-                    label.write-us__form-label Ваш e-mail
-                    input.write-us__form-input(type='text' placeholder='Для отправки ответа')
-                .write-us__wrap-input.write-us__wrap-input_textarea
-                    label.write-us__form-label Текст письма
-                    textarea(placeholder='В свободной форме').write-us__form-textarea
-                button.btn.write-us__btn Отправить

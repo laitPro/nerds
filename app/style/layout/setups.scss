@@ -1,24 +1,22 @@
 .wrapper {
-	min-height: 100%;
-	min-width: 1200px;
-	position: relative;
-	overflow: hidden;	
+  position: relative;
+  min-height: 100%;
+  min-width: 1200px;  
+  overflow: hidden; 
 }
 
 .container {
-	position: relative;
-	width: 	1200px;
-	padding-left: 20px;
-	padding-right: 	20px;
-	margin: 0 auto;
+  position: relative;
+  width:  1200px;
+  padding-left: 20px;
+  padding-right:  20px;
+  margin: 0 auto;
 
-	@extend %clearfix;
+  @extend %clearfix;
 }
 
 
 .outline {
-	outline: 1px solid red;
-	position: relative;
-	overflow: hidden;
+  outline: 1px solid red;
 }
 
