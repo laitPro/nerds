@@ -1,26 +1,29 @@
 .btn {
 	@include veral();
 	width: 240px;
+
 	padding-top: 15px;
 	padding-bottom: 15px;
 
-	line-height: 16px;
+	line-height: 18px;
+	font-weight: $font-medium;
 	text-align: center;
 	text-decoration: none;
+	text-transform: uppercase;
 	cursor: pointer;
 
-	background-color: #fb565a;
-	color: #fff;
+	background-color: $background-color-red;
+	color: $color-text-white;
 
 	border-radius: 2px;
 
-	box-shadow: inset 0px 0px 7px 0px rgba(#fff,.35);
+	box-shadow: inset 0px 0px 7px 0px rgba($color-text-white,.35);
 }
 
 .btn_green {
-	background-color: #00ca74;
+	background-color: $background-color-green;
 }
 
 .btn_yellow {
-	background-color: #efc84a;
+	background-color: $background-color-yellow;
 }

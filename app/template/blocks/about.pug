@@ -1,18 +1,18 @@
 section.about
   .about__left
-    h2.about__title Мы - маленькая, но гордая дизайн-студия из Краснодара.
+    h3.about__title Мы - маленькая, но гордая дизайн-студия из Краснодара.
     p.about__desc Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креапокладая рук, как роботы
     p.about__works-title Выполняем заказы на разработку:
     ul.about__works-list
       each item in works
         li.about__works-item
-          span.about__works-elem=item.works_elem
+          p.about__works-elem=item.works_elem
   .about__right
     .about__wrap-img
       img(src='imgs/content/nerds-illustration.jpg' alt='about-img').about__img
-      p.about__skills-title с 2004 года любим точность во всем:
-      ul.about__skills-list
-        each item in skills
-          li.about__skills-item
-            span.about__skills-number=item.skills_number
-            span.about__skills-desc=item.skills_text
+    p.about__skills-title с 2004 года любим точность во всем:
+    ul.about__skills-list
+      each item in skills
+        li.about__skills-item
+          span.about__skills-number=item.skills_number
+          span.about__skills-desc=item.skills_text

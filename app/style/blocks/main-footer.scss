@@ -9,10 +9,20 @@
 
 .main-footer__slogan {
 	@include veral(top);
+	max-width: 760px;
 }
 
 .main-footer__slogan-title {
+	margin: 0;
+	margin-bottom: 10px;
 	font-size: 36px;
-	line-height: 36px;
+	line-height: 38px;
 	font-weight: $font-bold;
+	color: $color-text-black; 
+}
+
+.main-footer__slogan-text {
+	margin: 0;
+	line-height: 22px;
+	color: $color-text-black-light3;
 }

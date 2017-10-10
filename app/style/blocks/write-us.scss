@@ -6,12 +6,12 @@
 	width: 960px;
 	min-height: 593px;
 
-	padding-top: 70px;
+	padding-top: 65px;
 	padding-left: 100px;
 	padding-right: 100px;
 	padding-bottom: 82px;
 
-	background: #fff;
+	background: $background-color-base;
 	box-shadow: 0 20px 40px rgba(#000101, .75);
 }
 
@@ -22,6 +22,7 @@
 	font-size: 45px;
 	line-height: 47px;
 	font-weight: $font-medium;
+	color: $color-text-black;
 }
 
 .write-us__close {
@@ -70,6 +71,7 @@
 	display: block;
 	line-height: 18px;
 	font-weight: $font-bold;
+	color: $color-text-black;
 	margin-bottom: 10px;
 }
 
@@ -90,6 +92,8 @@
 	display: block;
 	width: 100%;
 	height: 115px;
+	max-height: 115px;
+	max-width: 760px;
 
 	padding: 15px;
 

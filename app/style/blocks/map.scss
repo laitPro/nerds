@@ -9,36 +9,38 @@
 	top: 15px;
 	left: 695px;
 	
-	max-width: 232px;
+	width: 232px;
 }
 
 .flag-img {
-	max-width: 100%;
-	height: auto;
+	@include maxsize_img();
 }
 
 .map__info {
 	width: 320px;
+	max-height: 308px;
 	padding: 40px;
-	background: #fff;
+	background: $background-color-base;
+	overflow: hidden;
 }
 
 .map__info-title {
+	margin:0;
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: $font-bold;
+	text-transform: uppercase;
+	color: $color-text-black;
 	margin-bottom: 20px;
 }
 
 .map__info-text {
 	line-height: 18px;
-	color: #666;
+	color: $color-text-black-light2;
 	margin-bottom: 20px;
 }
 
 .map__button {
 	display: block;
 	margin-top: 35px;
-
-	background: #fb565a;
 }

@@ -1,4 +1,6 @@
 .socials {
+	@include reset_mp();
+	list-style: none;
 	@include veral(top);
 	width: 360px;
 	font-size: 0;
@@ -19,7 +21,7 @@
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	background: #e1e1e1;
+	background: $background-color-grey-light;
 
 	&:before {
 		content: '';

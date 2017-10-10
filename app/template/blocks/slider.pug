@@ -1,5 +1,5 @@
 .slider.main-header__slider
-  - for (var i=1; i < slides.length - 1; i++)
+  - for (var i = 1; i < slides.length - 1; i++)
       .slider__slide                       
           .slider__info
               h2.slider__title!=slides[i].title
@@ -13,4 +13,4 @@
               - if (i == 1)
                   a(href="#").pagination__link.pagination__link_active pagin
               - else
-                  a(href="#").pagination__link.pagination__link pagin
+                  a(href="#").pagination__link pagin

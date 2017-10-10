@@ -1,5 +1,5 @@
 .shop-cart {
-	width: 140px;
+	width: 160px;
 	text-align: right;
 }
 
@@ -7,10 +7,11 @@
 	position: relative;
 	@include veral();
 	padding-left: 40px;
-	font-size: 16px;
+	font-weight: $font-medium;
+	line-height: 30px;
 	text-transform: uppercase;
 	text-decoration: none;
-	color: #000;
+	color: $color-text-black;
 
 	&:before {
 		content: '';

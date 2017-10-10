@@ -1,13 +1,12 @@
 .partners {
 	padding-top: 45px;
 	padding-bottom: 40px;
-	border-bottom: 2px solid #eee;
+	border-bottom: 2px solid $background-color-grey;
 	margin-bottom: 80px;
 }
 
 .partners__list {
-	margin: 0;
-	padding: 0;
+	@include reset_mp();
 	list-style: none;
 	font-size: 0;
 }
@@ -24,13 +23,12 @@
 }
 
 .partners__wrap-img {
-	display: inline-block;
+	@include veral();
 	max-width: 260px;
 }
 
 .partners__img {
-	max-width: 100%;
-	height: auto;
+	@include maxsize_img();
 	opacity: .2;
 
 	&:hover {
