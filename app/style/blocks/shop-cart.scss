@@ -13,6 +13,14 @@
 	text-decoration: none;
 	color: $color-text-black;
 
+	&:hover {
+		color: $color-text-red;
+	}
+
+	&:active {
+		color: rgba($color-text-black, .3);
+	}
+
 	&:before {
 		content: '';
 		display: block;
@@ -22,6 +30,28 @@
 		left:0;
 
 		@include sprite($cart-icon);
+	}
+}
+
+.shop-cart__text_active {
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom:0;
+		left:0;
+		width: 100%;
+		height: 2px;
+		background: $background-color-red;
+	}
+
+	&:hover {
+		color: $color-text-black;
+	}
+
+	&:active {
+		color: rgba($color-text-black, 1);
 	}
 }
 

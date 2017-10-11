@@ -17,7 +17,7 @@
 	}
 }
 
-.nav-list__link{
+.nav-list__link {
 	display: block;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -25,4 +25,34 @@
 	font-weight: $font-medium;
 	line-height: 30px;
 	color: $color-text-black;
+
+	&:hover {
+		color: $color-text-red;
+	}
+
+	&:active {
+		color: rgba($color-text-black, .3);
+	}
 }
+
+.nav-list__link_active {
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom:0;
+		width: 100%;
+		height: 2px;
+		background: $background-color-red;
+	}
+
+	&:hover {
+		color: $color-text-black;
+	}
+
+	&:active {
+		color: rgba($color-text-black, 1);
+	}
+}
+

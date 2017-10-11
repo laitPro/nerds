@@ -17,13 +17,39 @@
 
 	border-radius: 2px;
 
-	box-shadow: inset 0px 0px 7px 0px rgba($color-text-white,.35);
+	box-shadow: inset 0px 0px 7px rgba($background-color-base,.35);
+
+	&:hover {
+		background: $background-color-red-hover;
+	}
+
+	&:active {
+		background: $background-color-red-active;
+		box-shadow: inset 0 3px rgba(#000101, .1);
+		color: rgba($color-text-white, .3);
+	}
 }
 
 .btn_green {
 	background-color: $background-color-green;
+
+	&:hover {
+		background: $background-color-green-hover;
+	}
+
+	&:active {
+		background: $background-color-green-active;
+	}
 }
 
 .btn_yellow {
 	background-color: $background-color-yellow;
+
+	&:hover {
+		background: $background-color-yellow-hover;
+	}
+
+	&:active {
+		background: $background-color-yellow-active;
+	}
 }
