@@ -11,6 +11,7 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	cursor: pointer;
+	border:0;
 
 	background-color: $background-color-red;
 	color: $color-text-white;
@@ -51,5 +52,18 @@
 
 	&:active {
 		background: $background-color-yellow-active;
+	}
+}
+
+.btn_grey {
+	background-color: $background-color-grey;
+
+	&:hover {
+		background: $background-color-grey-hover;
+	}
+
+	&:active {
+		background: $background-color-grey-active;
+		color: rgba($color-text-black, .3);
 	}
 }

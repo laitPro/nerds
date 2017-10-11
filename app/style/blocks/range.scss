@@ -1,0 +1,90 @@
+.range {
+	color: $color-text-black-light;
+	text-transform: uppercase;
+}
+
+.range__wrap-controls {
+	position: relative;
+	height: 80px;
+
+	margin-bottom: 15px;
+
+	border-radius: 2px;
+
+	background: $background-color-grey;
+
+	&:before {
+		content:'';
+		@include centered(y);
+		left:17px;
+		right: 22px;
+
+		height: 2px;
+
+		background: #d7dcde;
+	}
+}
+
+.range__control-left, .range__control-right {
+	@include centered(y);
+	z-index: 2;
+	width: 21px;
+	height: 21px;
+
+	background: $background-color-base;
+
+	box-shadow: 0 2px 1px rgba(#cccdcd, .9);
+
+	border-radius: 50%;
+
+	&:before {
+		content: '';
+		width: 5px;
+		height: 5px;
+
+		border-radius: 50%;
+		background: #ababab;
+		@include centered();
+	}
+}
+.range__control-left {
+	left:17px;
+}
+
+.range__control-right {
+	left: 160px;
+}
+.range__line {
+	@include centered(y);
+	z-index:1;
+	left: 20px;
+	width: 142px;
+	height: 2px;
+
+	background: #00ca74;
+}
+.range__label {
+	@include veral(middle);
+	margin-right: 10px;
+	line-height: 16px;
+}
+.range__input {
+	border: 0;
+	@include veral(middle);
+	width: 80px;
+
+	padding-top: 12px;
+	padding-bottom: 12px;
+
+	text-align: center;
+
+	line-height: 16px;
+
+	background: $background-color-grey;
+
+	border-radius:2px;
+}
+
+.range__input_min {
+	margin-right: 24px;
+}
