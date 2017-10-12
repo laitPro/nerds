@@ -46,33 +46,46 @@ block content
                   input(type="checkbox" id=''+ item name='features').settings__input
                 label(for=''+ item).settings__label.settings__label_checkbox= item
           button.btn.btn_grey.settings__btn Показать
-      .catalog.hidden
+      .catalog
         .catalog__controls
-          p.controls-title Сортировать
-          - var controls = ['По цене', 'По типу', 'По названию', 'По убыванию', 'По возрастанию']
+          p.controls-title Сортировать:
+          
           ul.controls-list
-            each item in controls
+            - var controls = ['По цене', 'По типу', 'По названию', 'По убыванию', 'По возрастанию'];
+            - var cl = 'controls-list__link';
+            each item, i in controls
+              -if ( i == 0 ) cl += ' controls-list__link_active'
+              - else cl = 'controls-list__link';
+              - if ( i == controls.length - 2 ) cl = 'controls-list__link-direct-down controls-list__link-direct_active';
+              - if ( i == controls.length - 1 ) cl = 'controls-list__link-direct-up';
+              -console.log(cl)
               li.controls-list__item
-                a(href="#").controls-list__link=item
-        - var products = ['1', '2' ,'3', '4', '5', '6']
+                    a(href="#" class='' + cl )=item
+
         ul.products
+          - var products = ['1', '2' ,'3', '4', '5', '6'];
           each item in products
             li.products__item
               .products__decor
-                .decor
-                .decor
-                .decor
+                -for (var i = 0; i < 3; i++)
+                  .decor
               .products__wrap-img
                 img(src="#", alt="").products__img
               .products__info
                 p.product__title=item
-                p.product__desc
-                a.btn.product__btn
-        - var paginations = ['1', '2' ,'3', 'следующая']
+                p.product__desc Информационный сайт для туристов
+                a.btn.product__btn 9 900 руб.
+
         ul.paginations
-          each item in paginations
+          - var paginations = ['1', '2' ,'3', 'следующая'];
+          - var cl = 'paginations__link'
+          each item, i in paginations
+            -if (i == 0) cl = 'paginations__link paginations__link_active'
+            -else cl = 'paginations__link';
+            -if (i == 3) cl = 'paginations__link paginations__link_next'
             li.paginations__item
-              a(href="#").paginations__link=item
+              a(href="#" class='' + cl)=item
+              
   include ../blocks/map.pug
 
   footer.main-footer
