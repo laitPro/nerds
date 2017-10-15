@@ -3,8 +3,12 @@ extends ../layouts/_main.layout.pug
 block title 
     | Nerds Catalog
 
+
+
 block content
-  header.main-header.main-header_catalog
+  -var page = 'catalog';
+
+  header.main-header
     .container
       include ../blocks/logo.pug
       include ../blocks/main-nav.pug

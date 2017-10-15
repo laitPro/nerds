@@ -3,7 +3,10 @@ nav.main-nav.main-header__main-nav
      - var nav = ['студия', 'клиенты', 'магазин', 'контакты']
       each item in nav
         li.nav-list__item
-          - if (item == 'студия')
+          - if ((item == 'студия') && ( page == 'index'))
               a.nav-list__link.nav-list__link_active=item
           - else
-              a(href="#").nav-list__link=item
+            -if ((item == 'магазин') && ( page == 'catalog'))
+              a(href="catalog.html").nav-list__link.nav-list__link_active=item
+            - else
+                a.nav-list__link=item
