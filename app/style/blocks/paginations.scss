@@ -20,8 +20,6 @@
 	border-radius: 2px;
 	border: 3px solid transparent;
 
-	background: #eee;
-
 	text-align: center;
 
 	font-size: 16px;
@@ -29,10 +27,31 @@
 	color: $color-text-black;
 	text-decoration: none;
 	text-transform: uppercase;
+
+	background-color: $background-color-grey;
+
+	&:hover {
+		background: $background-color-grey-hover;
+	}
+
+	&:active {
+		background: $background-color-grey-active;
+		color: rgba($color-text-black, .3);
+	}
 }
 
 .paginations__link_active {
 	border: 3px solid #dbdbdb;
+
+	background: $background-color-base;
+
+	&:hover {
+		background: $background-color-base;
+	}
+
+	&:active {
+		color: rgba($color-text-black, 1);
+	}
 }
 
 .paginations__link_next {

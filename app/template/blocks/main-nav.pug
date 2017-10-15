@@ -4,6 +4,6 @@ nav.main-nav.main-header__main-nav
       each item in nav
         li.nav-list__item
           - if (item == 'студия')
-              a(href="#").nav-list__link.nav-list__link_active=item
+              a.nav-list__link.nav-list__link_active=item
           - else
               a(href="#").nav-list__link=item

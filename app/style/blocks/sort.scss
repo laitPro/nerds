@@ -41,10 +41,27 @@
 	color: rgba($color-text-black, .3);
 	text-transform: uppercase;
 	text-decoration: none;
+
+	&:hover {
+		color: rgba($color-text-black, .6);
+	}
+
+	&:active {
+		color: rgba($color-text-black, 1);
+	}
 }
 
 .sort__link_active {
 	color: rgba($color-text-black, 1);
+
+	&:hover {
+		color: rgba($color-text-black, 1);
+	}
+
+	&:active {
+		color: rgba($color-text-black, 1);
+	}
+
 }
 
 .sort__link_direct_down, .sort__link_direct_up {
@@ -62,6 +79,14 @@
 	border-bottom-width: 0px;
 	border-top-width: 0px;
 
+	&:hover {
+		opacity: .4;
+	}
+
+	&:active {
+		opacity: 1;
+	}
+
 }
 
 .sort__link_direct_down {
@@ -74,4 +99,12 @@
 
 .sort__link_direct_active {
 	opacity: 1;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:active {
+		opacity: 1;
+	}
 }

@@ -20,22 +20,47 @@
 	padding-left: 36px;
 	font-size: 16px;
 	line-height: 25px;
-	color: $color-text-black-light;
+	color: rgba($color-text-black-light,1);
 
 	&:before {
 		content: '';
 		@include centered(y);
 		left:0;
 		@include sprite($radio-off);
+		height: 24px;
+		opacity: .4;
 	}
 
 	&:hover {
 		cursor: pointer;
+		color: rgba($color-text-black,1);
+
+		&:before {
+			opacity: 1;
+		}
 	}
 }
 
-.custom-radio__input[type="radio"]:checked +  .custom-radio__label {
+.custom-radio__input[type="radio"]:checked + .custom-radio__label {
 	&:before {
 		@include sprite($radio-on);
+		height: 24px;
+	}	
+}
+
+.custom-radio__input[type="radio"]:disabled + .custom-radio__label {
+	color: rgba($color-text-black-light, .3);
+	cursor: auto;
+
+	&:before {
+		opacity: .1;
+	}
+
+	&:hover {
+		color: rgba($color-text-black-light, .3);
+
+		&:before {
+			opacity: .1;
+		}
 	}	
 }

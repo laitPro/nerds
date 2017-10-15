@@ -8,5 +8,9 @@
       - else cl = 'sort__link';
       - if ( i == controls.length - 2 ) cl = 'sort__link_direct_down sort__link_direct_active';
       - if ( i == controls.length - 1 ) cl = 'sort__link_direct_up';
-      li.sort__item
-            a(href="#" class='' + cl )=item
+      - if ( (i == 0) || (i == 3 ))
+        li.sort__item
+          a(class='' + cl )=item
+      - else 
+        li.sort__item
+          a(href="#" class='' + cl)=item

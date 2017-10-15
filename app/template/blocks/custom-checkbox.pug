@@ -3,7 +3,7 @@ ul.custom-checkbox.settings__custom-checkbox
   each item in features
     li.custom-checkbox__item
       - if (item == 'Слайдер' || item == 'Новости')
-        input(type="checkbox" id=''+ item name='features' checked).custom-checkbox__input
+        input(type="checkbox" id=''+ item name='features' checked disabled).custom-checkbox__input
       - else
         input(type="checkbox" id=''+ item name='features').custom-checkbox__input
       label(for=''+ item).custom-checkbox__label= item

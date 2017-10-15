@@ -64,14 +64,38 @@
     ],
     "products" : [
         {
-            "products__img" : "",
+            "products__img" : "imgs/content/img-sedona.jpg",
             "product__infotitle" : "Sedona",
             "product__infodesc" : "Информационный сайт для туристов",
             "product__btn" : "9 900 руб."
         },
         {
-            "products__img" : "",
-            "product__infotitle" : "Sedona",
+            "products__img" : "imgs/content/img-pink.jpg",
+            "product__infotitle" : "Pink",
+            "product__infodesc" : "Информационный сайт для туристов",
+            "product__btn" : "9 900 руб."
+        },
+        {
+            "products__img" : "imgs/content/img-barbershop.jpg",
+            "product__infotitle" : "Barbershop",
+            "product__infodesc" : "Информационный сайт для туристов",
+            "product__btn" : "9 900 руб."
+        },
+        {
+            "products__img" : "imgs/content/img-mishka.jpg",
+            "product__infotitle" : "Miska",
+            "product__infodesc" : "Информационный сайт для туристов",
+            "product__btn" : "9 900 руб."
+        },
+        {
+            "products__img" : "imgs/content/img-aplus.jpg",
+            "product__infotitle" : "Aplus",
+            "product__infodesc" : "Информационный сайт для туристов",
+            "product__btn" : "9 900 руб."
+        },
+        {
+            "products__img" : "imgs/content/img-kvast.jpg",
+            "product__infotitle" : "Kvas",
             "product__infodesc" : "Информационный сайт для туристов",
             "product__btn" : "9 900 руб."
         }

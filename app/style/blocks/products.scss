@@ -20,6 +20,10 @@
 	}
 
 	&:hover {
+		.products__decor {
+			background: #4d4d4d;	
+		}
+
 		.products__info {
 			display: block;
 		}
@@ -35,7 +39,7 @@
 	background: rgba(#4d4d4d, .12);
 }
 
-.decor {
+.decor-elem {
 	@include veral();
 	width: 14px;
 	height: 14px;
@@ -48,8 +52,8 @@
 }
 
 .products__wrap-img {
-	width: 360px;
-	height: 575px;
+	width: 358px;
+	height: 573px;
 }
 
 .products__img {

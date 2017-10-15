@@ -18,20 +18,33 @@
   padding-left: 36px;
   font-size: 16px;
   line-height: 25px;
-  color: $color-text-black-light;
+  color: rgba($color-text-black-light,1);
 
   &:before {
     content: '';
     @include centered(y);
     left:0;
     @include sprite($checkbox-off);
-
+    opacity: .4;
     height: 22px;
   }
 
   &:hover {
     cursor: pointer;
+    color: rgba($color-text-black,1);
+
+    &:before {
+      opacity: 1;
+    }
   }
+
+  &:disabled {
+    color: rgba($color-text-black-light, .3);
+    &:before {
+      opacity: .1;
+    }
+  }
+
 }
 
 .custom-checkbox__input:checked +  .custom-checkbox__label {
@@ -39,5 +52,22 @@
     @include sprite($checkbox-on);
 
     height: 22px;
+  } 
+}
+
+.custom-checkbox__input[type="checkbox"]:disabled + .custom-checkbox__label {
+  color: rgba($color-text-black-light, .3);
+  cursor: auto;
+
+  &:before {
+    opacity: .1;
+  }
+
+  &:hover {
+    color: rgba($color-text-black-light, .3);
+
+    &:before {
+      opacity: .1;
+    }
   } 
 }

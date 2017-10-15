@@ -3,9 +3,9 @@ ul.products.catalog__products
     li.products__item
       .products__decor
         -for (var i = 0; i < 3; i++)
-          .decor
+          .decor-elem
       .products__wrap-img
-        img(src="#", alt="").products__img
+        img(src="" + item.products__img, alt="").products__img
       .products__info
         p.product__info-title=item.product__infotitle
         p.product__info-desc=item.product__infodesc
