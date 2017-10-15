@@ -1,0 +1,9 @@
+ul.paginations
+  - var paginations = ['1', '2' ,'3', 'следующая'];
+  - var cl = 'paginations__link'
+  each item, i in paginations
+    -if (i == 0) cl = 'paginations__link paginations__link_active'
+    -else cl = 'paginations__link';
+    -if (i == 3) cl = 'paginations__link paginations__link_next'
+    li.paginations__item
+      a(href="#" class='' + cl)=item

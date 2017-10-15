@@ -1,83 +1,29 @@
 .settings {}
 
+.settings__title {
+  margin: 0;
+  margin-bottom: 20px;
+  
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: $font-bold;
+}
+
 .settings__range {
 	margin-bottom: 60px;
 }
 
-.settings__title {
-	margin: 0;
-	margin-bottom: 20px;
-	font-size: 18px;
-	line-height: 20px;
-	font-weight: $font-bold;
-}
-
-.settings__title_price {
-	margin-bottom: 55px;
-}
-
-.settings__list {
-	list-style: none;
-	font-size: 0;
-	@include reset_mp();
-
+.settings__custom-radio {
 	margin-bottom: 45px;
 }
 
-.settings__input {
-	display: none;
+.settings__custom-checkbox {
+	margin-bottom: 40px;
 }
-
-.settings__input[type="radio"]:checked +  .settings__label_radio {
-	&:before {
-		@include sprite($radio-on);
-	}	
-}
-
-.settings__input[type="checkbox"]:checked +  .settings__label_checkbox {
-	&:before {
-		@include sprite($checkbox-on);
-	}	
-}
-
-.settings__label {
-	position: relative;
-	@include veral();
-	width: 100%;
-	margin-bottom: 15px;
-	padding-left: 36px;
-	font-size: 16px;
-	line-height: 25px;
-	color: $color-text-black-light;
-
-	&:before {
-		content:'';
-		@include centered(y);
-		left:0;
-	}
-
-	&:hover {
-		cursor: pointer;
-	}
-}
-
-.settings__label_radio {
-	&:before {
-		@include sprite($radio-off);
-	}	
-}
-
-.settings__label_checkbox {
-	&:before {
-		@include sprite($checkbox-off);
-	}
-}
-
-.settings__features {}
-
-.settings__features-item {}
 
 .settings__btn {
 	display: block;
+	width: 100%;
 	color: $color-text-black;
 }
+

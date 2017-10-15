@@ -12,80 +12,21 @@ block content
     .container
       h2.main-header__title Магазин готовых шаблонов
   main.main-content.main-content_catalog
-    .container
+    .container    
       aside.sidebar
         form.settings
-          p.settings__title.settings__title_price Стоимость:
-          .range.settings__range
-            .range__wrap-controls
-              a(href="#").range__control-left
-              a(href="#").range__control-right
-              .range__line
-            label(for='min').range__label от
-            input(type="text" placeholder='0' name='min' id='min').range__input.range__input_min
-            label(for='max').range__label до
-            input(type="text" placeholder='1500' name='max' id='max').range__input
-          p.settings__title Сетка
-          - var grid = ['Адаптивная', 'Фиксированная', 'Резиновая']
-          ul.settings__list
-            each item in grid
-              li.settings__item
-                - if (item == 'Адаптивная')
-                  input(type="radio" id=''+ item name='grid' checked).settings__input
-                - else
-                  input(type="radio" id=''+ item name='grid').settings__input
-                label(for=''+ item).settings__label.settings__label_radio= item
+          include ../blocks/range
+          p.settings__title Сетка:      
+          include ../blocks/custom-radio
           p.settings__title Особенности:
-          -var features = ['Слайдер','Блок преимуществ','Новости','Галерея','Корзина']
-          ul.settings__list
-            each item in features
-              li.settings__item
-                - if (item == 'Слайдер' || item == 'Новости')
-                  input(type="checkbox" id=''+ item name='features' checked).settings__input
-                - else
-                  input(type="checkbox" id=''+ item name='features').settings__input
-                label(for=''+ item).settings__label.settings__label_checkbox= item
+          include ../blocks/custom-checkbox
           button.btn.btn_grey.settings__btn Показать
-      .catalog
-        .catalog__controls
-          p.controls-title Сортировать:
-          
-          ul.controls-list
-            - var controls = ['По цене', 'По типу', 'По названию', 'По убыванию', 'По возрастанию'];
-            - var cl = 'controls-list__link';
-            each item, i in controls
-              -if ( i == 0 ) cl += ' controls-list__link_active'
-              - else cl = 'controls-list__link';
-              - if ( i == controls.length - 2 ) cl = 'controls-list__link-direct-down controls-list__link-direct_active';
-              - if ( i == controls.length - 1 ) cl = 'controls-list__link-direct-up';
-              -console.log(cl)
-              li.controls-list__item
-                    a(href="#" class='' + cl )=item
+      .catalog       
+        include ../blocks/sort
+        include ../blocks/products
+        include ../blocks/paginations
 
-        ul.products
-          - var products = ['1', '2' ,'3', '4', '5', '6'];
-          each item in products
-            li.products__item
-              .products__decor
-                -for (var i = 0; i < 3; i++)
-                  .decor
-              .products__wrap-img
-                img(src="#", alt="").products__img
-              .products__info
-                p.product__title=item
-                p.product__desc Информационный сайт для туристов
-                a.btn.product__btn 9 900 руб.
-
-        ul.paginations
-          - var paginations = ['1', '2' ,'3', 'следующая'];
-          - var cl = 'paginations__link'
-          each item, i in paginations
-            -if (i == 0) cl = 'paginations__link paginations__link_active'
-            -else cl = 'paginations__link';
-            -if (i == 3) cl = 'paginations__link paginations__link_next'
-            li.paginations__item
-              a(href="#" class='' + cl)=item
-              
+        
   include ../blocks/map.pug
 
   footer.main-footer

@@ -1,0 +1,9 @@
+ul.custom-radio.settings__custom-radio
+  - var grid = ['Адаптивная', 'Фиксированная', 'Резиновая']
+  each item in grid
+    li.custom-radio__item
+      - if (item == 'Адаптивная')
+        input(type="radio" id=''+ item name='grid' checked).custom-radio__input
+      - else
+        input(type="radio" id=''+ item name='grid').custom-radio__input
+      label(for=''+ item).custom-radio__label= item

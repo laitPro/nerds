@@ -1,0 +1,12 @@
+.sort.catalog__sort
+  p.sort__title Сортировать:
+  ul.sort__list
+    - var controls = ['По цене', 'По типу', 'По названию', 'По убыванию', 'По возрастанию'];
+    - var cl = 'sort__link';
+    each item, i in controls
+      -if ( i == 0 ) cl += ' sort__link_active'
+      - else cl = 'sort__link';
+      - if ( i == controls.length - 2 ) cl = 'sort__link_direct_down sort__link_direct_active';
+      - if ( i == controls.length - 1 ) cl = 'sort__link_direct_up';
+      li.sort__item
+            a(href="#" class='' + cl )=item

@@ -1,7 +1,5 @@
 .products {
-	list-style: none;
-	font-size: 0;
-	@include reset_mp();
+	@include reset_ul();
 }
 
 .products__item {
@@ -75,14 +73,14 @@
 	padding-right: 80px;
 }
 
-.product__title {
+.product__info-title {
 	font-size: 18px;
 	line-height: 18px;
 	font-weight: $font-bold;
 	text-transform: uppercase;
 }
 
-.product__desc {
+.product__info-desc {
 	font-size: 16px;
 	line-height: 18px;
 	color: $color-text-black-light2;

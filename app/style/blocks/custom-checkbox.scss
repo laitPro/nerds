@@ -1,0 +1,43 @@
+.custom-checkbox {
+  @include reset_ul();
+}
+
+.custom-checkbox__item {}
+
+.custom-checkbox__input {
+  display: none;
+
+  font-size: 16px;
+}
+
+.custom-checkbox__label {
+  position: relative;
+  @include veral();
+  width: 100%;
+  margin-bottom: 15px;
+  padding-left: 36px;
+  font-size: 16px;
+  line-height: 25px;
+  color: $color-text-black-light;
+
+  &:before {
+    content: '';
+    @include centered(y);
+    left:0;
+    @include sprite($checkbox-off);
+
+    height: 22px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.custom-checkbox__input:checked +  .custom-checkbox__label {
+  &:before {
+    @include sprite($checkbox-on);
+
+    height: 22px;
+  } 
+}

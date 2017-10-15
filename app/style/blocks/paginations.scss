@@ -1,7 +1,5 @@
 .paginations {
-	list-style: none;
-	@include reset_mp();
-	font-size: 0;
+	@include reset_ul(all);
 }
 
 .paginations__item {

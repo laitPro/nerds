@@ -1,6 +1,14 @@
 .range {
 	color: $color-text-black-light;
-	text-transform: uppercase;
+}
+
+.range__title {
+	margin: 0;
+	margin-bottom: 55px;
+
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: $font-bold;
 }
 
 .range__wrap-controls {
@@ -67,6 +75,7 @@
 	@include veral(middle);
 	margin-right: 10px;
 	line-height: 16px;
+	text-transform: uppercase;
 }
 .range__input {
 	border: 0;
@@ -77,6 +86,7 @@
 	padding-bottom: 12px;
 
 	text-align: center;
+	text-transform: uppercase;
 
 	line-height: 16px;
 

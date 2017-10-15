@@ -1,0 +1,9 @@
+ul.custom-checkbox.settings__custom-checkbox
+  - var features = ['Слайдер','Блок преимуществ','Новости','Галерея','Корзина']
+  each item in features
+    li.custom-checkbox__item
+      - if (item == 'Слайдер' || item == 'Новости')
+        input(type="checkbox" id=''+ item name='features' checked).custom-checkbox__input
+      - else
+        input(type="checkbox" id=''+ item name='features').custom-checkbox__input
+      label(for=''+ item).custom-checkbox__label= item

@@ -61,5 +61,20 @@
             "skills_number" : "50",
             "skills_text" : "Минимальная предоплата"
         }
-    ] 
+    ],
+    "products" : [
+        {
+            "products__img" : "",
+            "product__infotitle" : "Sedona",
+            "product__infodesc" : "Информационный сайт для туристов",
+            "product__btn" : "9 900 руб."
+        },
+        {
+            "products__img" : "",
+            "product__infotitle" : "Sedona",
+            "product__infodesc" : "Информационный сайт для туристов",
+            "product__btn" : "9 900 руб."
+        }
+
+    ]
 }

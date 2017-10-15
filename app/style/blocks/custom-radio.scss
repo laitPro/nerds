@@ -1,0 +1,41 @@
+.custom-radio {
+	@include reset_ul();
+}
+
+.custom-radio__item {
+
+}
+
+.custom-radio__input {
+	display: none;
+
+	font-size: 16px;
+}
+
+.custom-radio__label {
+	position: relative;
+	@include veral();
+	width: 100%;
+	margin-bottom: 15px;
+	padding-left: 36px;
+	font-size: 16px;
+	line-height: 25px;
+	color: $color-text-black-light;
+
+	&:before {
+		content: '';
+		@include centered(y);
+		left:0;
+		@include sprite($radio-off);
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.custom-radio__input[type="radio"]:checked +  .custom-radio__label {
+	&:before {
+		@include sprite($radio-on);
+	}	
+}

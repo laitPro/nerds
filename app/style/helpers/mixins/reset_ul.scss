@@ -1,0 +1,10 @@
+@mixin reset_ul($where: 'in') {
+  list-style: none;
+  font-size: 0;
+  padding: 0;
+
+  @if $where != 'in' {
+    margin: 0;
+  }
+  
+}
