@@ -7,8 +7,9 @@ var $ = {
     task: require('./gulp/path/path.task'),
     template: require('./gulp/path/path.template'),
     img: require('./gulp/path/path.img.js'),
-    img: require('./gulp/path/path.img.js'),
-    font: require('./gulp/path/path.fonts.js')
+    font: require('./gulp/path/path.fonts.js'),
+    foundation: require('./gulp/path/path.foundation.js'),
+    app: require('./gulp/path/path.app.js')
   },
   gulp: require('gulp'),
   combine: require('stream-combiner2').obj,
@@ -29,9 +30,7 @@ $.path.task.forEach(function(taskPath) {
   require(taskPath)($);
 });
 
-
 $.dev = true;
-
 
 $.gulp.task('default', $.gulp.series(
   'clean',
@@ -42,7 +41,9 @@ $.gulp.task('default', $.gulp.series(
   ),
   $.gulp.parallel(
     'pug',
-    'sass'
+    'sass',
+    'js.foundation',
+    'js.process'
   ),
   $.gulp.parallel(
     'watch',
