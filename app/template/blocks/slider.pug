@@ -1,5 +1,5 @@
 .slider.main-header__slider
-  - for (var i = 1; i < slides.length - 1; i++)
+  - for (var i = 0; i < slides.length; i++)
       .slider__slide                       
           .slider__info
               h2.slider__title!=slides[i].title
@@ -7,10 +7,10 @@
               a(href="#").btn.slider__btn Узнать больше
           .slider__wrap-img
               img(src='' + slides[i].src_img alt='slider-img' style='' + slides[i].style).slider__img
-  ul.slider__pagination
-      - for (var i=1; i<=3; i++)
-          li.pagination__item
-              - if (i == 1)
-                  a(href="#").pagination__link.pagination__link_active pagin
-              - else
-                  a(href="#").pagination__link pagin
+  //- ul.slider__pagination
+  //-     - for (var i=1; i<=3; i++)
+  //-         li.pagination__item
+  //-             - if (i == 1)
+  //-                 a(href="#").pagination__link.pagination__link_active pagin
+  //-             - else
+  //-                 a(href="#").pagination__link pagin
