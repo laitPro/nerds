@@ -114,13 +114,17 @@
 	max-width: 760px;
 }
 
+.write-us__form-input[placeholder], .write-us__form-textarea[placeholder] {
+	color: #a1a1a1;
+}
+
+.write-us__form-input:focus, .write-us__form-textarea:focus{ 
+  color: $color-text-black;
+}
+
 .write-us__form-input_unvalid, .write-us__form-textarea_unvalid {
 	color: $color-text-red-hover;
 	border-color: $background-color-red-hover;
-}
-
-.write-us__form-input[placeholder] {
-	color: #a1a1a1;
 }
 
 .write-us__btn {

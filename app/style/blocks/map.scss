@@ -1,7 +1,17 @@
 .map {
+	position: relative;
 	height: 416px;
 	background: url('../imgs/content/map_large2.jpg') center center no-repeat;
 	padding-top: 53px;
+}
+
+#map {
+	top: 0;
+    width:100%;
+    height:100%;
+    border:0;
+    z-index: 100;
+    position: absolute;
 }
 
 .map__wrap-flag {
@@ -10,6 +20,7 @@
 	left: 695px;
 	
 	width: 232px;
+
 }
 
 .flag-img {
@@ -17,11 +28,13 @@
 }
 
 .map__info {
+	position: relative;
 	width: 320px;
 	max-height: 308px;
 	padding: 40px;
 	background: $background-color-base;
 	overflow: hidden;
+	z-index: 101;
 }
 
 .map__info-title {

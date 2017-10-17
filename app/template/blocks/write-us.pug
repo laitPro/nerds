@@ -1,14 +1,15 @@
-.write-us.hidden
-  p.write-us__title Напишите нам
-  a(href="#").write-us__close
-  form(action="#").write-us__form
-    .write-us__wrap-input.write-us__wrap-input_name
-      label.write-us__form-label Ваше имя:
-      input.write-us__form-input(type='text' placeholder='Представьтесь,  пожалуйста')
-    .write-us__wrap-input
-      label.write-us__form-label Ваш e-mail
-      input.write-us__form-input(type='text' placeholder='Для отправки ответа')
-    .write-us__wrap-input.write-us__wrap-input_textarea
-      label.write-us__form-label Текст письма:
-      textarea(placeholder='В свободной форме').write-us__form-textarea
-    button.btn.write-us__btn Отправить
+div(style='display: none')
+  .write-us
+    p.write-us__title Напишите нам
+    a(href="#").write-us__close.arcticmodal-close
+    form(action="#").write-us__form
+      .write-us__wrap-input.write-us__wrap-input_name
+        label.write-us__form-label Ваше имя:
+        input.write-us__form-input(type='text' placeholder='Представьтесь, пожалуйста' required pattern="[A-Za-zА-Яа-я]+" autofocus)
+      .write-us__wrap-input
+        label.write-us__form-label Ваш e-mail
+        input.write-us__form-input(type='email' placeholder='Для отправки ответа' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$")
+      .write-us__wrap-input.write-us__wrap-input_textarea
+        label.write-us__form-label Текст письма:
+        textarea(placeholder='В свободной форме' required).write-us__form-textarea
+      button.btn.write-us__btn Отправить

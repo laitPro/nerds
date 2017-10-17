@@ -46,7 +46,7 @@
 	@include maxsize_img();
 }
 
-.slick-dots {
+.slider .slick-dots {
 	@include reset_mp();
 	position: absolute;
 	left: 536px;
@@ -54,7 +54,7 @@
 	font-size: 0;
 }
 
-.slick-dots li {
+.slider .slick-dots li {
 	font-size: 16px;
 	@include veral();
 	width: 20px;
@@ -72,14 +72,14 @@
 	}
 }
 
-.slick-dots li a {
+.slider .slick-dots li a {
 	display: block;
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
 
-.slick-dots li.slick-active a {
+.slider .slick-dots li.slick-active a {
 	&:before {
 		content:'';
 		display: block;
