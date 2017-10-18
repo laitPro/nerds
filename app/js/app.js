@@ -26,6 +26,12 @@
     });
   });
 
+  $('.write-us__form').on('submit', function(event) {
+    event.preventDefault();
+    console.log('i try submit')
+    $('.write-us').arcticmodal('close');
+  });
+
 })();
 
 function initMap() {
