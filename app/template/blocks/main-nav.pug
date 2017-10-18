@@ -1,12 +1,13 @@
 nav.main-nav.main-header__main-nav
   ul.nav-list
-     - var nav = ['студия', 'клиенты', 'магазин', 'контакты']
-      each item in nav
+     - 
+      var nav = [
+        {url: '/', name: 'Студия'}, 
+        {url: '#', name: 'Клиенты'},
+        {url: 'catalog.html', name: 'Магазин'},
+        {url: '#', name: 'Контакты'}
+      ];
+     - var cl = {'default' : 'nav-list__link', 'active' : 'nav-list__link_active'}
+      each i in nav
         li.nav-list__item
-          - if ((item == 'студия') && ( page == 'index'))
-              a.nav-list__link.nav-list__link_active=item
-          - else
-            -if ((item == 'магазин') && ( page == 'catalog'))
-              a(href="catalog.html").nav-list__link.nav-list__link_active=item
-            - else
-                a.nav-list__link=item
+          +navLink(i.url, i.name, i.url == pageUrl, cl)

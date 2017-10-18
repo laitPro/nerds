@@ -1,12 +1,13 @@
 extends ../layouts/_main.layout.pug
 
+append sharedVars
+  - var pageUrl = 'catalog.html';
+
 block title 
     | Nerds Catalog
 
-
-
 block content
-  -var page = 'catalog';
+  -var page = 'catalog.html';
 
   header.main-header
     .container

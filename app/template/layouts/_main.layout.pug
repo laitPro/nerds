@@ -1,7 +1,9 @@
 doctype html
 html
+  block sharedVars
+  include ../helpers/mixins
   include ../modules/_head
   body
     .wrapper
       block content
-    include ../modules/_scripts 
+    include ../modules/_scripts
