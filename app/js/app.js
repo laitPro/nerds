@@ -32,6 +32,46 @@
     $('.write-us').arcticmodal('close');
   });
 
+  $("#range-slider").slider({
+    min: 0,
+    max: 15000,
+    step: 1,
+    range: true,
+    values: [0,6000],
+    create: function( event, ui ) {   
+      $('.range__input_min').val($(this).slider( "values", 0 ));
+      $('.range__input_max').val($(this).slider( "values", 1 ));
+    },
+    slide: function( event, ui ) {
+      $('.range__input_min').val(ui.values[0]);
+      $('.range__input_max').val(ui.values[1]);
+    }
+  });
+
+  $(".range__input").keyup(function(e){
+    e.preventDefault;
+    var el = e.target.classList[1];
+    console.log("I try change:", e.keyCode);
+
+    var newel = $('.' + el).val($('.' + el).val().replace( /[^0123456789]/, '' ));
+
+    var val1=$(".range__input_min").val(),
+        val2=$(".range__input_max").val();
+
+    // Set correct input values min max
+    var min = Math.min(val1,val2, 15000);
+    var max = Math.min(15000,Math.max(val1,val2));
+
+    console.log("min:", min, "max:",max);
+
+    $("#range__slider").slider("values",0,min);
+    $("#range__slider").slider("values",1,max);
+
+    $(".range__input_min").val(min),
+    $(".range__input_max").val(max);
+
+  });
+    
 })();
 
 function initMap() {

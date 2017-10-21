@@ -1,10 +1,12 @@
 .range.settings__range
   p.range__title Стоимость:
   .range__wrap-controls
-    a(href="#").range__control-left
-    a(href="#").range__control-right
-    .range__line
+    #range-slider
+  //- .range__wrap-controls
+  //-   a(href="#").range__control-left
+  //-   a(href="#").range__control-right
+  //-   .range__line
   label(for='min').range__label от
-  input(type="text" placeholder='0' name='min' id='min').range__input.range__input_min
+  input(type="text" placeholder='0' value='0' name='min' id='min').range__input.range__input_min
   label(for='max').range__label до
-  input(type="text" placeholder='1500' name='max' id='max').range__input
+  input(type="text" placeholder='1500' value='6000' name='max' id='max').range__input.range__input_max

@@ -21,6 +21,10 @@
 
 	background: $background-color-grey;
 
+
+	padding-left: 20px;
+	padding-right: 20px;
+
 	&:before {
 		content:'';
 		@include centered(y);
