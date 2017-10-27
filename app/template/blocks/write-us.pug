@@ -5,11 +5,11 @@ div(style='display: none')
     form(action="#").write-us__form
       .write-us__wrap-input.write-us__wrap-input_name
         label.write-us__form-label Ваше имя:
-        input.write-us__form-input(type='text' placeholder='Представьтесь, пожалуйста' required pattern="[A-Za-zА-Яа-я]+" autofocus)
+        input.write-us__form-input(type='text' placeholder='Представьтесь, пожалуйста' name='name' required  autofocus)
       .write-us__wrap-input
         label.write-us__form-label Ваш e-mail:
-        input.write-us__form-input(type='email' placeholder='Для отправки ответа' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$")
+        input.write-us__form-input(type='email' placeholder='Для отправки ответа' required )
       .write-us__wrap-input.write-us__wrap-input_textarea
         label.write-us__form-label Текст письма:
-        textarea(placeholder='В свободной форме' required).write-us__form-textarea
+        textarea(placeholder='В свободной форме' required name='question').write-us__form-textarea
       button.btn.write-us__btn Отправить

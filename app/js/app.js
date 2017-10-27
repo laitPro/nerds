@@ -26,11 +26,32 @@
     });
   });
 
-  $('.write-us__form').on('submit', function(event) {
-    event.preventDefault();
-    console.log('i try submit')
-    $('.write-us').arcticmodal('close');
-  });
+  // $('.write-us__form').on('submit', function(event) {
+  //   event.preventDefault();
+  //   console.log('i try submit')
+  //   $('.write-us').arcticmodal('close');
+  // });
+
+  $('.write-us__form').validate({
+    submitHandler: function(form) {
+      $('.write-us').arcticmodal('close');
+      form.submit();
+      console.log("I try");
+    },
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      } 
+    },
+    messages: {
+      name: {
+        required: "Необходимо ваше имя для связи",
+        minlength: "Минимальная длина имени не менее 2 символов"
+      }
+    }
+  })
+    
 
   $("#range-slider").slider({
     min: 0,
